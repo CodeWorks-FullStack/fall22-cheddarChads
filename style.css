@@ -1,0 +1,113 @@
+:root {
+  --theme-primary: #F5AE43;
+  --theme-secondary: #F6D55C;
+  --theme-accent: #3EC5FF;
+  --theme-grey: #D9D9D9;
+  --color: #131313;
+  --white: #f2eeee;
+  --font-size: 16px;
+  --boldness: 700;
+  --section-padding: 3rem;
+  --button-padding: .75rem 1.25rem;
+}
+
+
+body {
+  color: var(--color);
+  font-size: var(--font-size);
+  background-color: var(--theme-grey);
+}
+
+section {
+  padding: var(--section-padding);
+}
+
+
+.glass-card {
+  background: rgba(40, 40, 40, 0.47);
+  border: 1px solid #535353;
+  border-radius: 9px;
+  color: var(--white);
+  font-weight: var(--boldness);
+  padding: .5rem;
+}
+
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1551606712-ce1d9e8fbee4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+  height: 60vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero:first-child>.row {
+  height: 80%;
+}
+
+.info-cards {
+  background-color: var(--theme-secondary);
+  pointer-events: none;
+}
+
+.info-card {
+  transition: all .3s linear;
+  background-color: var(--theme-secondary);
+  pointer-events: all;
+}
+
+
+.info-card-middle {
+  border-right: 3px solid var(--color);
+  border-left: 3px solid var(--color);
+}
+
+.info-card:hover {
+  transform: translateY(-3vh);
+}
+
+.product {
+  position: relative;
+}
+
+.product img {
+  border-radius: 8px;
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.product button {
+  position: absolute;
+  bottom: -4%;
+  right: 5%;
+  background-color: var(--theme-accent);
+}
+
+.btn-accent {
+  background-color: var(--theme-accent);
+  color: var(--color);
+  border: #2fb7f2;
+  font-weight: var(--boldness);
+  padding: var(--button-padding);
+  border-radius: 16px;
+}
+
+.btn-accent:hover {
+  background-color: #49c7fe;
+  color: var(--color);
+  border: #39bef7;
+}
+
+
+@media screen AND (max-width: 768px) {
+  .hero{
+    background-image: url('https://images.unsplash.com/photo-1516640000-9951e17c051d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+  }
+  .hero:first-child>.row {
+    height: 50%;
+  }
+
+  .info-card:hover{
+    transform: none;
+  }
+}
